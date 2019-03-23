@@ -9,8 +9,8 @@ import javax.persistence.*;
 public class UserRole {
     @Id
     @GeneratedValue
-    @Column(name = "user_role_id", unique = true, nullable = false)
-    private Integer userRoleId;
+    @Column(name = "id", unique = true, nullable = false)
+    private int id;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "username", nullable = false)
@@ -28,12 +28,10 @@ public class UserRole {
         this.role = role;
     }
 
-    public Integer getUserRoleId() {
-        return userRoleId;
-    }
+    public int getId() {return id; }
 
-    public void setUserRoleId(Integer userRoleId) {
-        this.userRoleId = userRoleId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public User getUser() {

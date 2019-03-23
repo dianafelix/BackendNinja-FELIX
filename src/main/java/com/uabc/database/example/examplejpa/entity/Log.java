@@ -25,6 +25,9 @@ public class Log {
     @Column(name = "url")
     private String url;
 
+    public Log(){
+
+    }
 
     public Log(Date date, String details, String username, String url) {
         this.date = date;
