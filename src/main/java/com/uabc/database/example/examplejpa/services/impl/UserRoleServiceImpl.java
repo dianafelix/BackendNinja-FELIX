@@ -35,10 +35,8 @@ public class UserRoleServiceImpl implements UserRoleService{
     public List<UserRoleModel> listAllUserRoles() {
         List<UserRole> userRoles = userRoleRepository.findAll();
         List<UserRoleModel> userRolesModel = new ArrayList();
-        for(UserRole userRole : userRoles){
+        for(UserRole userRole : userRoles)
             userRolesModel.add(userRoleConverter.convertUserRole2UserRoleModel(userRole));
-
-        }
         return userRolesModel;
     }
 

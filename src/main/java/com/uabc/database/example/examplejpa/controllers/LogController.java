@@ -43,7 +43,7 @@ public class LogController {
     @PostMapping("/addlog")
     //El ModelAttribute corresponde con el th:object que utilizamos en la vista de contactform
     public String addLog(@ModelAttribute(name = "logModel")LogModel logModel,
-                         Model model){
+                         Model model)throws Exception{
         log.info("Method: addLog() -- Params: "+logModel.toString());
         if(logService.addLog(logModel) != null){
             model.addAttribute("result", 1);//esto es para que se muestre un mensaje de que se agregó éxitosamente

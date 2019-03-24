@@ -6,8 +6,8 @@ import com.uabc.database.example.examplejpa.model.LogModel;
 
 import java.util.List;
 
-public interface LogService {
-    public abstract LogModel addLog(LogModel logModel);
+public interface LogService{
+    public abstract LogModel addLog(LogModel logModel) throws Exception;
 
     public abstract List<LogModel> listAllLogs();
 
